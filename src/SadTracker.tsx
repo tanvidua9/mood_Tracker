@@ -1,12 +1,14 @@
 import { type FC, memo } from "react";
-import Button from "./Button";
+import { useSelector } from "react-redux";
+import { SadCountSelector } from "./selectors";
 
 type SadTrackerProps = {};
 
 const SadTracker: FC<SadTrackerProps> = (props) => {
+  const sadCount= useSelector(SadCountSelector);
   return(
     <div className="bg-blue-500 px-8 py-4 rounded-2xl">
-        You were sad 10 times.
+        You were sad {sadCount} times.
     </div>
   )
 };

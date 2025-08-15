@@ -1,7 +1,7 @@
 import type { state } from "./store"
 export function happyMomentSelector(State:state){
-    return State.happyMoments;
+    return State.happy.happyMoments;
 }
 export function sadMomentSelector(State:state){
-    return State.sadMoments;
+    return State.sad.sadMoments;
 }

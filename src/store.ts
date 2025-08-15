@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
-import type { Action } from "redux";
+import type {AnyAction } from "redux";
+import { HAPPY_BUTTON_CLICKED, SAD_BUTTON_CLICKED } from "./actions";
 
 export type state={
     sadCount: number,
@@ -12,14 +13,22 @@ const initialState={
 }
 
 //reducer has to be non mutating
-function reducer(currentState:state = initialState, action: Action): state{
-    if(action.type === "Happy button clicked"){
-        return {...currentState, happyCount: currentState.happyCount+1}
-    }else if(action.type === "Sad button clicked"){
-        return {...currentState, sadCount: currentState.sadCount+1}
+function reducer(currentState:state = initialState, action: AnyAction): state{
+    switch (action.type) {
+        case HAPPY_BUTTON_CLICKED:
+            return {
+            ...currentState,
+            happyCount: currentState.happyCount + action.payload,
+            };
+        case SAD_BUTTON_CLICKED:
+            return {
+            ...currentState,
+            sadCount: currentState.sadCount + action.payload,
+            };
+        default:
+            return currentState;
     }
 
-    return currentState;
 }
 
 

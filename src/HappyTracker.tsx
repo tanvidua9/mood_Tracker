@@ -8,7 +8,7 @@ const HappyTracker: FC<HappyTrackerProps> = () => {
   const happyCount= useSelector(happyCountSelector);
   return(
     <div className="bg-orange-700 px-8 py-4 rounded-2xl">
-        You were happy {happyCount} times.
+        Total happy points: {happyCount}
     </div>
   )
 };

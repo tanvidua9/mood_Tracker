@@ -4,7 +4,7 @@ import { SadCountSelector } from "./selectors";
 
 type SadTrackerProps = {};
 
-const SadTracker: FC<SadTrackerProps> = (props) => {
+const SadTracker: FC<SadTrackerProps> = () => {
   const sadCount= useSelector(SadCountSelector);
   return(
     <div className="bg-blue-500 px-8 py-4 rounded-2xl">

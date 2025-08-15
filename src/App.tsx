@@ -1,4 +1,3 @@
-import React from "react"
 import HappyTracker from "./HappyTracker"
 import SadTracker from "./SadTracker"
 import HappyIncrementor from "./HappyIncrementor"

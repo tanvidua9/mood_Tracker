@@ -9,7 +9,7 @@ const HappyIncrementor: FC<HappyIncrementorProps> = () => {
   const dispatch= useDispatch();
 
   function increment(){
-    dispatch(happyButtonClicked(quantity));
+    dispatch(happyButtonClicked(quantity, new Date()));
   }
 
   return(

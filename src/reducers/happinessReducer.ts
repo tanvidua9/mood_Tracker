@@ -1,6 +1,6 @@
 import type { AnyAction } from "redux";
 import type { Moment } from "../store";
-import { HAPPY_BUTTON_CLICKED } from "../actions";
+import { CLEAR_BUTTON_CLICKED, HAPPY_BUTTON_CLICKED } from "../actions";
 
  export type happyState={
     happyMoments : Moment[]
@@ -20,6 +20,8 @@ function happinessReducer(currentState:happyState, action: AnyAction){
                     }
                 ]
             }
+        case CLEAR_BUTTON_CLICKED:
+            return initialHappyState;
     }
     return currentState;
 }

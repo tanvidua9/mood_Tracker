@@ -17,7 +17,6 @@ const HappyIncrementor: FC<HappyIncrementorProps> = () => {
         <h3>Are  you happy?</h3>
         <input className="border border-gray-300 rounded-md" type="number" value={quantity} onChange={(event)=> setQuantity(+event.target.value)}/>
         <button onClick={increment} className="bg-orange-700 p-2 rounded-xl">Yes</button>
-
     </div>
   )
 };

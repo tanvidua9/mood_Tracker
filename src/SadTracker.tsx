@@ -1,6 +1,6 @@
 import { type FC, memo } from "react";
 import { useSelector } from "react-redux";
-import { sadMomentSelector } from "./selectors";
+import { sadMomentSelector } from "./selectors/mood-selectors";
 
 type SadTrackerProps = {};
 
